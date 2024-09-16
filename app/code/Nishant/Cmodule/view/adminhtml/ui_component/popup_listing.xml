@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:View/UI/etc/ui_configuration.xsd">
+    <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:noNamespaceSchemaLocation="urn:magento:framework:View/UI/etc/ui_configuration.xsd">
+        <dataSource name="nishant_cmodule_listing_data_source">
+    <argument name="dataProvider" xsi:type="string">Nishant\Cmodule\Model\Ui\Component\Listing\DataProvider</argument>
+</dataSource>
+        <columns name="nishant_cmodule_listing_columns">
+            <column name="popup_id">
+                <settings>
+                    <label translate="true">ID</label>
+                    <sortOrder>10</sortOrder>
+                    <dataType>text</dataType>
+                </settings>
+            </column>
+            <column name="name">
+                <settings>
+                    <label translate="true">Name</label>
+                    <sortOrder>20</sortOrder>
+                    <dataType>text</dataType>
+                </settings>
+            </column>
+            <column name="content">
+                <settings>
+                    <label translate="true">Content</label>
+                    <sortOrder>30</sortOrder>
+                    <dataType>text</dataType>
+                </settings>
+            </column>
+            <column name="created_at">
+                <settings>
+                    <label translate="true">Created At</label>
+                    <sortOrder>40</sortOrder>
+                    <dataType>date</dataType>
+                </settings>
+            </column>
+            <column name="popup_timeout">
+                <settings>
+                    <label translate="true">Timeout</label>
+                    <sortOrder>50</sortOrder>
+                    <dataType>number</dataType>
+                </settings>
+            </column>
+            <actionsColumn name="actions">
+                <settings>
+                    <actions>
+                        <action name="edit">
+                            <settings>
+                                <type>edit</type>
+                                <label translate="true">Edit</label>
+                                <url path="nishant_cmodule/popup/edit"/>
+                            </settings>
+                        </action>
+                        <action name="delete">
+                            <settings>
+                                <type>delete</type>
+                                <label translate="true">Delete</label>
+                                <url path="nishant_cmodule/popup/delete"/>
+                            </settings>
+                        </action>
+                    </actions>
+                </settings>
+            </actionsColumn>
+        </columns>
+        <listingToolbar name="listing_toolbar"/>
+    </listing>
+</config>
